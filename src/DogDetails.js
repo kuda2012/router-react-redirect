@@ -1,12 +1,14 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect, useHistory } from "react-router-dom";
 import "./DogDetails.css";
 
 const DogDetails = ({ dogs }) => {
   const { name } = useParams();
   const dog = dogs.filter((dog) => dog.name === name);
+  const history = useHistory();
   const shouldRedirect = dog[0] ? false : true;
+  if (shouldRedirect) history.push("/dogs");
   return (
     <>
       {!shouldRedirect && (
@@ -34,7 +36,6 @@ const DogDetails = ({ dogs }) => {
           </div>
         </div>
       )}
-      {shouldRedirect && <Redirect to="/dogs" />}
     </>
   );
 };

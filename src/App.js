@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Nav dogs={App.defaultProps} /> */}
+        <Nav dogs={App.defaultProps} />
         <Switch>
           <Route exact path="/dogs">
             <DogList dogs={App.defaultProps} />
