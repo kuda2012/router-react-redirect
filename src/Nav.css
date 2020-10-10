@@ -1,0 +1,9 @@
+.Nav {
+  text-align: center;
+  list-style-position: inside;
+  display: inline-block;
+}
+
+.Nav-list {
+  text-align: left;
+}

@@ -1,0 +1,8 @@
+.DogDetails-facts {
+  text-align: center;
+  list-style-position: inside;
+  display: inline-block;
+}
+.DogDetails-fact {
+  text-align: left;
+}
